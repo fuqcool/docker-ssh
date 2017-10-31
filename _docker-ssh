@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+#compdef docker-ssh
+_docker-ssh() {
+    compadd $(docker ps --format "{{.Names}}")
+    compadd $(docker ps --format "{{.ID}}")
+}
